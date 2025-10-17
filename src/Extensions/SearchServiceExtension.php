@@ -19,7 +19,7 @@ use SilverStripe\Forager\Service\Traits\ServiceAware;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\ReadonlyField;
-use SilverStripe\ORM\DataExtension;
+use SilverStripe\Core\Extension;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Versioned\Versioned;
 use Throwable;
@@ -30,7 +30,7 @@ use Throwable;
  * @property DataObject|SearchServiceExtension $owner
  * @property string $SearchIndexed
  */
-class SearchServiceExtension extends DataExtension
+class SearchServiceExtension extends Extension
 {
 
     use Configurable;

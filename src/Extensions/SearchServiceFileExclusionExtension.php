@@ -5,12 +5,12 @@ namespace SilverStripe\Forager\Extensions;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\Core\Config\Configurable;
 use SilverStripe\Dev\Deprecation;
-use SilverStripe\ORM\DataExtension;
+use SilverStripe\Core\Extension;
 
 /**
  * Add the ability to exclude specific file extensions
  */
-class SearchServiceFileExclusionExtension extends DataExtension
+class SearchServiceFileExclusionExtension extends Extension
 {
 
     use Configurable;
