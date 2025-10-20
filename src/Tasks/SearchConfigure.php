@@ -2,11 +2,14 @@
 
 namespace SilverStripe\Forager\Tasks;
 
-use SilverStripe\Control\HTTPRequest;
 use SilverStripe\Dev\BuildTask;
-use SilverStripe\Forager\Exception\IndexingServiceException;
-use SilverStripe\Forager\Interfaces\IndexingInterface;
+use SilverStripe\Control\HTTPRequest;
+use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputInterface;
 use SilverStripe\Forager\Service\Traits\ServiceAware;
+use Symfony\Component\Console\Output\OutputInterface;
+use SilverStripe\Forager\Interfaces\IndexingInterface;
+use SilverStripe\Forager\Exception\IndexingServiceException;
 
 /**
  * Syncs index settings to a search service.
@@ -19,9 +22,9 @@ class SearchConfigure extends BuildTask
 
     use ServiceAware;
 
-    protected $title = 'Search Service Configure'; // phpcs:ignore SlevomatCodingStandard.TypeHints
+    protected string $title = 'Search Service Configure'; // phpcs:ignore SlevomatCodingStandard.TypeHints
 
-    protected $description = 'Sync search index configuration'; // phpcs:ignore SlevomatCodingStandard.TypeHints
+    protected static string $description = 'Sync search index configuration'; // phpcs:ignore SlevomatCodingStandard.TypeHints
 
     private static $segment = 'SearchConfigure'; // phpcs:ignore SlevomatCodingStandard.TypeHints
 
@@ -36,11 +39,13 @@ class SearchConfigure extends BuildTask
      * @param HTTPRequest $request
      * @throws IndexingServiceException
      */
-    public function run($request): void // phpcs:ignore SlevomatCodingStandard.TypeHints
+    protected function execute(InputInterface $input, OutputInterface $output): int // phpcs:ignore SlevomatCodingStandard.TypeHints
     {
         $this->getIndexService()->configure();
 
         echo 'Done.';
+
+        return Command::SUCCESS;
     }
 
 }

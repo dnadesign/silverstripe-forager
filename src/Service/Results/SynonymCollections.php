@@ -2,9 +2,9 @@
 
 namespace SilverStripe\Forager\Service\Results;
 
-use InvalidArgumentException;
 use JsonSerializable;
-use SilverStripe\ORM\ArrayList;
+use InvalidArgumentException;
+use SilverStripe\Model\List\ArrayList;
 
 class SynonymCollections extends ArrayList implements JsonSerializable
 {

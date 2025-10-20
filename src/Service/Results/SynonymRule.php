@@ -3,10 +3,10 @@
 namespace SilverStripe\Forager\Service\Results;
 
 use JsonSerializable;
+use SilverStripe\Model\ModelData;
 use SilverStripe\Core\Injector\Injectable;
-use SilverStripe\View\ViewableData;
 
-class SynonymRule extends ViewableData implements JsonSerializable
+class SynonymRule extends ModelData implements JsonSerializable
 {
 
     use Injectable;
