@@ -25,7 +25,7 @@ use SilverStripe\Forms\GridField\GridFieldPaginator;
 use SilverStripe\Forms\HeaderField;
 use SilverStripe\Forms\LiteralField;
 use SilverStripe\Forms\NumericField;
-use SilverStripe\ORM\ArrayList;
+use SilverStripe\Model\List\ArrayList;
 use SilverStripe\ORM\DataQuery;
 use SilverStripe\Security\Permission;
 use SilverStripe\Security\PermissionProvider;

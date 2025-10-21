@@ -6,7 +6,7 @@ use Page;
 use SilverStripe\Dev\SapphireTest;
 use SilverStripe\Forager\DataObject\DataObjectDocument;
 use SilverStripe\Forager\Extensions\SiteTreeHierarchyExtension;
-use SilverStripe\ORM\ArrayList;
+use SilverStripe\Model\List\ArrayList;
 
 class SiteTreeHierarchyExtensionTest extends SapphireTest
 {

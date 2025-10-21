@@ -3,7 +3,7 @@
 namespace SilverStripe\Forager\Extensions\Subsites;
 
 use SilverStripe\Core\Extension;
-use SilverStripe\ORM\ArrayList;
+use SilverStripe\Model\List\ArrayList;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\ORM\DataQuery;
 use SilverStripe\Subsites\Model\Subsite;
